@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+// Zyriyah
+<html>
+<head>
+  <title>Palindrome Checker</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #FFC0CB);
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      font-weight: bold;
+      padding: 20px;
+    }
+
+    p {
+      color: white;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-weight: bold;
+      border: none;
+      background-color: pink;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to this Loop!</h1>
+  <p>Enter a word to check if it is a palindrome:</p>
+
+  <script>
+    // JavaScript code
+    // Function to check if a string is a palindrome
+    function isPalindrome(str) {
+      // Remove spaces from the string
+      var formattedStr = str.replace(/\s/g, '');
+
+      // Reverse the string
+      var reversedStr = formattedStr.split('').reverse().join('');
+
+      // Check if the reversed string is equal to the original string
+      return formattedStr === reversedStr;
+    }
+
+    // Loop to prompt the user for input
+    while (true) {
+      // Prompt the user for a word
+      var userInput = prompt("Enter a word (or 'exit' to quit):");
+
+      // Exit the loop if the user chooses to quit
+      if (userInput === 'exit') {
+        break;
+      }
+
+      // Check if the word is a palindrome
+      var isPalin = isPalindrome(userInput);
+
+      // Notify the user if the word is a palindrome or not
+      if (isPalin) {
+        alert("The word '" + userInput + "' is a palindrome!");
+      } else {
+        alert("The word '" + userInput + "' is not a palindrome.");
+      }
+    }
+  </script>
+</body>
+</html>
